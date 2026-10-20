@@ -26,6 +26,7 @@
         android:id="@+id/btnCalculate"
         android:layout_width="215dp"
         android:layout_height="65dp"
+        android:backgroundTint="@color/button_color"
         android:text="@string/btn_calculate" />
 
     <TextView
