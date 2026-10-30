@@ -23,7 +23,7 @@ import org.junit.runner.RunWith;
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
 
-    private static final String SAMPLE_TEXT = "Labas, pasaule. Man 25 metai.";
+    private static final String SAMPLE_TEXT = "Labas, pasauli.";
     private static final int POSITION_SENTENCES = 0;
     private static final int POSITION_WORDS = 1;
     private static final int POSITION_PUNCTUATION = 2;
