@@ -71,17 +71,17 @@ public class MainActivity extends AppCompatActivity {
         int resultValue;
         switch (spinnerMetric.getSelectedItemPosition()) {
             case METRIC_SENTENCES:
-                resultValue = textMetrics.CountSentences(inputText);
+                resultValue = textMetrics.countSentences(inputText);
                 break;
             case METRIC_WORDS:
-                resultValue = textMetrics.CountWords(inputText);
+                resultValue = textMetrics.countWords(inputText);
                 break;
             case METRIC_PUNCTUATION:
-                resultValue = textMetrics.CountPunctuation(inputText);
+                resultValue = textMetrics.countPunctuation(inputText);
                 break;
             case METRIC_NUMBERS:
             default:
-                resultValue = textMetrics.CountNumbers(inputText);
+                resultValue = textMetrics.countNumbers(inputText);
                 break;
         }
 

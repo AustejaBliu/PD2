@@ -9,7 +9,7 @@ public class TextMetrics {
     private static final Pattern WORD_PATTERN = Pattern.compile("\\p{L}+");
     private static final Pattern NUMBER_PATTERN = Pattern.compile("\\d+");
 
-    public int CountSentences(String text) {
+    public int countSentences(String text) {
         int sentenceCount = 0;
         for (String part : text.split(SENTENCE_SEPARATOR)) {
             if (!part.trim().isEmpty()) {
@@ -19,16 +19,16 @@ public class TextMetrics {
         return sentenceCount;
     }
 
-    public int CountWords(String text) {
-        return CountMatches(WORD_PATTERN, text);
+    public int countWords(String text) {
+        return countMatches(WORD_PATTERN, text);
     }
 
-    public int CountNumbers(String text) {
-        return CountMatches(NUMBER_PATTERN, text);
+    public int countNumbers(String text) {
+        return countMatches(NUMBER_PATTERN, text);
     }
 
     // Skyrybos zenklai pagal uzduoti: tarpai, kableliai, taskai
-    public int CountPunctuation(String text) {
+    public int countPunctuation(String text) {
         int punctuationCount = 0;
         for (char symbol : text.toCharArray()) {
             if (symbol == ' ' || symbol == ',' || symbol == '.') {
@@ -38,7 +38,7 @@ public class TextMetrics {
         return punctuationCount;
     }
 
-    private int CountMatches(Pattern pattern, String text) {
+    private int countMatches(Pattern pattern, String text) {
         Matcher matcher = pattern.matcher(text);
         int matchCount = 0;
         while (matcher.find()) {
